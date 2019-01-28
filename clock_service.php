@@ -24,10 +24,10 @@ Regresa JSON {status, msg, data}
     $json['status']             = 200;
     $json['msg']                = 'OK';
     $json['data']['hour']       = $dateTime->format('H');
-    $json['data']['minute']       = $dateTime->format('i');
-    $json['data']['second']       = $dateTime->format('s');
+    $json['data']['minute']     = $dateTime->format('i');
+    $json['data']['second']     = $dateTime->format('s');
     
-    $json['data']['complete']       = $dateTime->format('d/m/Y H:i:s');
+    $json['data']['complete']   = $dateTime->format('d/m/Y H:i:s');
     $json['data']['zone']       = $dateTime->getTimezone()->getName();
     
     print(JSON_ENCODE($json))

@@ -19,6 +19,20 @@ final class WebServices {
     
     static let url = "https://luislunapa.com/universidad/"
     
+    /**
+     Obtiene de servicio web la hora separada por 3 componentes (Horas, Minutos, Segundos)
+     - Author:
+     Luis Gerardo Luna
+     - returns:
+     Una tupla de (Hora, Minutos, Segundos)
+     - important:
+     Esta función corre asíncronamente, al llamarla se debe manejar la promesa
+     - version:
+     1.0
+     
+ 
+ */
+    
     static func getTimeServidor() -> Promise<(String,String,String)> {
         
         return Promise<(String,String,String)> {
